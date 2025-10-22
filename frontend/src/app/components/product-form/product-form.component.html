@@ -1,0 +1,7 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <input formControlName="name" placeholder="Nama produk" />
+  <input formControlName="price" type="number" placeholder="Harga" />
+  <input formControlName="stock" type="number" placeholder="Stok" />
+  <input formControlName="description" placeholder="Deskripsi" />
+  <button type="submit">Simpan</button>
+</form>

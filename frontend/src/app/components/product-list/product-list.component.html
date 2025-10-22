@@ -1,0 +1,25 @@
+<h2>Daftar Produk</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Nama</th>
+      <th>Harga</th>
+      <th>Stok</th>
+      <th>Aksi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of products">
+      <td>{{ p.name }}</td>
+      <td>Rp {{ p.price }}</td>
+      <td>{{ p.stock }}</td>
+      <td>
+        <button (click)="edit(p)">Edit</button>
+        <button (click)="remove(p.id)">Hapus</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<app-product-form [product]="editing" (saved)="onSaved()"></app-product-form>
